@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Jack Bosco</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="canonical" href="{{ url_for('home') }}">
+    <link rel="stylesheet" id="open-sans-css" 
+    href="https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&subset=latin%2Clatin-ext&ver=4.2.4" type="text/css" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600italic,600,400,400italic" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrapper">
+        <a class="site-title" href="/">Jack Bosco</a>
+        <nav class="site-nav">
+          <div class="trigger"><h1>Main Navigation</h1>
+            <ul class="menu">
+              <li><a href="{{ url_for('home') }}">Bio</a></li>
+              <li><a href="{{ url_for('home') }}">Media</a></li>
+            </ul>
+          </div>  
+        </nav>
+      </div>
+    </header>
+    <div class="page-content">
+      <div class="wrapper" :after>
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
+    <footer class="site-footer">
+      <div class="wrapper">
+        <div class="footer-col-wrapper">
+          <div class="footer-col  footer-col-2">
+            <ul class="social-media-list" style="margin-left: 50px;">
+              <li>
+                <a href="https://github.com/jackbosco">
+                  <span class="icon  icon--github">
+                    <svg viewBox="0 0 16 16">
+                      <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path>
+                    </svg>
+                  </span>
+                  <span class="username">Github</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/mohammad-taha-khan-49513581/">
+                  <span class="icon  icon--instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="" viewBox="-2 0 26 26"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                  </span>
+                  <span class="username"> LinkedIn</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col  footer-col-3">
+            <p class="text" style="margin-left: 190px;">
+              CSCI Bachelor of the Arts '2024
+              <br>Washington and Lee University
+              <br>Lexington, VA 24450
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- This website is a modified version of the jekyll template developed by Steven Miller, Joel Glovier and Alex King (https://github.com/svmiller/steve-ngvb-jekyll-template). -->
+    </footer>
+  </body>
+</html>
