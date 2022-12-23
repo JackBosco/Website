@@ -1,11 +1,13 @@
 from flask import Flask, render_template, request, url_for, redirect
+from datetime import date
 import sqlite3
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template("index.html")
+    return render_template("index.html", date='{0:%A}, {0:%b}. {0:%d} ({0:%Y})'.format(date.today()))
+
 
 # def get_db_connection(database):
 #     # establishes a connection with the database and returns a connection object
