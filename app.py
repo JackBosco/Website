@@ -8,6 +8,10 @@ app = Flask(__name__)
 def home():
     return render_template("index.html", date='{0:%A}, {0:%b}. {0:%d} ({0:%Y})'.format(date.today()))
 
+@app.route('/media')
+def media():
+    return render_template("media.html")
+
 
 # def get_db_connection(database):
 #     # establishes a connection with the database and returns a connection object

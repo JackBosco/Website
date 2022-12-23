@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}Media{% endblock %}
+{% block content %}
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">Media</h1>
+  </header>
+
+  <div class="post-content-media-container">
+    <a class="post-content-media-row" href="https://csblog.academic.wlu.edu/2022/06/14/2022-computer-science-summer-research-scholars/">
+      <div class="thumbnail">
+        <img src={{url_for('static', filename='images/srs.png')}}>
+      </div>
+      <div class="media-caption">
+        <h4>2022 Computer Science Summer Research Scholars</h4>
+        <p>6/14/2022</p>
+      </div>
+    </a>
+    <a class="post-content-media-row" href="https://generalssports.com/news/2022/4/26/general-washington-and-lee-announces-2022-winter-term-scholar-athlete-awards.aspx">
+      <div class="thumbnail">
+        <img src={{url_for('static', filename='images/study.jpg')}}>
+      </div>
+      <div class="media-caption">
+        <h4>Washington and Lee Announces Winter Term Scholar-Athlete Awards</h4>
+        <p>4/26/2022</p>
+      </div>
+    </a>
+    <a class="post-content-media-row" href="https://generalssports.com/news/2022/3/10/w-l-wrestling-lauded-for-academic-and-athletic-success.aspx">
+      <div class="thumbnail">
+        <img src={{url_for('static', filename='images/allAmerican.jpeg')}}>
+      </div>
+      <div class="media-caption">
+        <h4>W&amp;L Wrestling Lauded for Academic and Athletic Success</h4>
+        <p>3/10/2022</p>
+      </div>
+    </a>
+    <a class="post-content-media-row" href="https://generalssports.com/news/2021/11/21/four-generals-place-at-the-star-city-wrestling-tournament.aspx">
+      <div class="thumbnail">
+        <img src={{url_for('static', filename='images/headgear.jpeg')}}>
+      </div>
+      <div class="media-caption">
+        <h4>Four Generals Place at the Star City Wrestling Tournament</h4>
+        <p>11/21/2021</p>
+      </div>
+    </a>
+    <a class="post-content-media-row" href="https://generalssports.com/news/2020/12/11/general-a-record-number-of-w-l-students-earn-scholar-athlete-awards.aspx">
+      <div class="thumbnail">
+        <img src={{url_for('static', filename='images/study2.jpg')}}>
+      </div>
+      <div class="media-caption">
+        <h4>A Record Number of W&amp;L Students Earn Scholar-Athlete Awards</h4>
+        <p>12/11/2020</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+{%endblock%}

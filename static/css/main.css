@@ -156,6 +156,24 @@ h11 { /*    font-size: 42px; */ letter-spacing: 0px; line-height: 1; font-family
 
 .post-content { margin-bottom: 30px; }
 
+.post-content-media-container{width: 100%; border-collapse: collapse}
+
+.post-content-media-row{border-bottom: 1px solid rgb(3, 21, 40);padding: 10px; cursor: pointer; display: grid; grid-template-columns: 25% auto}
+
+.post-content-media-row:hover{background-color: #004270;}
+
+.post-content-media-row > div{height: 100px;}
+
+.thumbnail {grid-column: 1; text-align: center; background-color: rgba(48, 43, 43, 0.491);}
+
+.media-caption {grid-column: 2; vertical-align: top; margin-left: 5%;}
+
+.media-caption > h4{grid-column: 2; text-align: left; margin-bottom: 0px; font-size: medium;}
+
+.media-caption > p{color: rgb(106, 104, 104); text-align: left; font-size: 12px;}
+
+.thumbnail > img{ max-height:100px; object-fit: contain; object-position: center;}
+
 .post-content h2 { font-family: 'Titillium Web', sans-serif; font-weight: 500; /*        font-size: 32px; */ }
 
 @media screen and (max-width: 1100px) { .post-content h2 { font-size: 28px; } }
