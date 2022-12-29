@@ -11,21 +11,34 @@
   <div class="project">
     <div class="title-row" href="https://www.gymlibrary.dev/environments/classic_control/cart_pole/">
       <h2>CartPole</h2>
+      <p>Utilizing reinforcement learning, I trained an AI to survive the OpenAIGym CartPole environment for 500 steps.
+        The training method was a standard <i>Q</i>-learning algorithm with an expected value matrix (2D NumPy array) data structure.
+      </p>
     </div>
     <div class="graphics-row">
       <div class="display">
         <img src={{url_for('static', filename='images/cartpole.gif')}}>
       </div>
       <div class="chart">
-        <p>Utilizing reinforcement learning, I trained an AI to survive the OpenAIGym CartPole environment for 500 episodes.
-          The training method was a standard <i>Q</i>-learning algorithm with an expected value matrix (2D NumPy array) data structure.
-        </p>
         <img src= {{url_for('static', filename='images/cartpoletrainingchart.png')}}>
-        <ul>
-          Hyperparameters:
-          <li>buckets : <i>4-tuple</i></li>
-        </ul>
       </div>
+    </div>
+    <div class="text-row">
+      <p>
+        The CartPole environment's state space is continuous, so storing every possible state in an array is not feasible. 
+        Thus, for Q-learning to work the buckets hyperparameter is necessary as it discretizes the state space. 
+        <i>But</i> - you might object - <i>multi-layered perceptions are capable of handling a continuous state space with no extra hyperparameters.</i>
+        True, yet SARSA algorithms typically require several more hyperparameters than Q-learning.
+        Therefore by discretizing we may learn CartPole with less external input.
+      </p>
+      <ul>
+        Hyperparameters:
+        <li>buckets (discretizes state space to) : <i>4-tuple</i>=(3, 3, 6, 6)</li>
+        <li>neps (number of training episodes)<i>int</i>=1000</li>
+        <li>alpha : <i>float</i>=0.1</li>
+        <li>gamma (learning coefficient) <i>float</i>=1.0 --this means it does nothing</li>
+        <li>epsilon=0.1, decay=25 (dynamic epsilon values with 25 as annealing coefficient and 0.1 as ultimate value)</li>
+      </ul>
     </div>
   </div>
 </div>
