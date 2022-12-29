@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<div class="post-content">
+  <header class="post-header">
+    <h1 class="post-title">Projects</h1>
+  </header>
+  
+  <div class="project">
+    <div class="title-row" href="https://www.gymlibrary.dev/environments/classic_control/cart_pole/">
+      <h2>CartPole</h2>
+    </div>
+    <div class="graphics-row">
+      <div class="display">
+        <img src={{url_for('static', filename='images/cartpole.gif')}}>
+      </div>
+      <div class="chart">
+        <p>Utilizing reinforcement learning, I trained an AI to survive the OpenAIGym CartPole environment for 500 episodes.
+          The training method was a standard Q-Learning algorithm with a Q-Matrix (2D NumPy array) data structure.
+        </p>
+        <img src= {{url_for('static', filename='images/cartpoletrainingchart.png')}}>
+        <ul>
+          Hyperparameters:
+          <li>buckets : <i>4-tuple</i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+  {%endblock%}

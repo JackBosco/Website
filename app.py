@@ -16,6 +16,10 @@ def media():
 def resume():
     return redirect(url_for('static', filename='images/resume.pdf'))
 
+@app.route('/projects')
+def projects():
+    return render_template("projects.html")
+
 
 # def get_db_connection(database):
 #     # establishes a connection with the database and returns a connection object
