@@ -41,6 +41,59 @@
       </ul>
     </div>
   </div>
+  <div class="project">
+    <div class="title-row" href="http://pornhub.com">
+      <h2>Pendulum</h2>
+      <p>
+        Utilizing reinforcement learning, I trained an AI to work in the OpenAIGym Pendulum environment.
+        The idea is to swing the pendulum straight upwards: against gravity.
+        I trained it using a SARSA algorithm with the PyTorch neural network data structure.
+      </p>
+    </div>
+    <div class="graphics-row">
+      <div class="display">
+        <img src={{url_for('static', filename='images/pendulum.gif')}}>
+      </div>
+      <div class="chart">
+        <img src={{url_for('static', filename='images/pendulumtrainingchart.png')}}>
+      </div>
+    </div>
+    <div class="text-row">
+      <p>
+        As oppesed to the CartPole environment, Pendulum is motivated by mitigating penalty.
+        Pendulum's environment has both a continuous action space and state space. 
+        While SARSA training can handle a continuous state space, I still had to discretize the action space.
+        This is where the n-actions hyperparameter comes in.
+        Admitedly, an actor-critic model with continuous probability distributions would yeild less hyperparameters.
+      </p>
+      <ul>
+        Hyperparameters:
+        <li>
+          gamma (Discount rate for Q_target): <i>float</i>=0.95
+        </li>
+        <li>
+          neps (Number of epsidoes to run): <i>int</i>=300
+        </li>
+        <li>
+          batch-size (Mini-batch size): <i>int</i>=16
+        </li>
+        <li>
+          hidden-dim (Hidden dimension): <i>int</i>=90
+        </li>
+        <li>
+          capacity (Replay memory capacity): <i>int</i>=50000 --this didn't end up mattering
+        </li>
+        <li>
+          max-episode (e-Greedy target episode where epsilon=min-eps): <i>int</i>=200
+        </li>
+        <li>
+          min-eps (Min epsilon): <i>float</i>=0.00175
+        </li>
+        <li>
+          n-actions (Discrete number of actions): <i>int</i>=4
+        </li>
+      </ul>
+  </div>
 </div>
 
-  {%endblock%}
+{%endblock%}
