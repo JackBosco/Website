@@ -131,4 +131,3 @@ dmypy.json
 #database stuff
 *.db
 init_db.py
-*.sql
